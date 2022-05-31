@@ -1,0 +1,13 @@
+.Leaderboard {
+    display: grid;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.leaderboard-btns button{
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    font-size: 12px;
+}

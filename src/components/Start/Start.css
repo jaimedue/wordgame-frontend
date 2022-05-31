@@ -1,0 +1,53 @@
+.Start {
+    height: 100vh;
+    min-height: 750px;
+    display: grid;
+    grid-template-rows: repeat(4, 25%);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 2 / 3;
+}
+
+.play-btn-container {
+    grid-row: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 132px;
+    margin: 20px;
+}
+
+.play-btn {
+    font-size: 42px;
+    padding: 16px 52px;
+}
+
+.play-btn:hover {
+    background-color: #e4ff76;
+}
+
+@media screen and (max-width: 900px) {
+    .Start {
+        min-height: 500px;
+        grid-template-rows: 20% 30% 30% 20%;
+    }
+    .play-btn-container {
+        grid-row: span 2;
+    }
+
+    @media screen and (max-width: 500px) {
+        .Start {
+            grid-template-rows: 20% 30% 30% 20%;
+        }
+        h1 {
+            font-size: 22vw;
+        }
+    }
+}

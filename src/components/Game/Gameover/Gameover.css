@@ -1,0 +1,145 @@
+.Gameover {
+    display: grid;
+    grid-template-rows: repeat(10, 10%);
+    grid-template-columns: repeat(10, 10%);
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.SaveScore {
+    grid-row: 1 / span 7;
+    grid-column: 1 / span 10;
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(10, 10%);
+    align-items: center;
+}
+
+.final-score-main {
+    grid-row: 1 / span 5;
+    font-size: 24px;
+}
+
+#final-score {
+    font-size: 48px;
+}
+
+.final-score-sub {
+    grid-row: 6 / 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.final-score-container {
+    padding: 5px;
+    border: 1px solid black;
+    width: 200px;
+    margin: 10px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.h3 {
+    grid-row: 1 / span 1;
+}
+
+.p {
+    font-size: 36px;
+    grid-row: 2 / span 1;
+}
+
+#c-count p {
+    color: green;
+}
+
+#i-count p{
+    color: red;
+}
+
+.SaveScore input {
+    margin: 10px;
+    width: 300px;
+    height: 30px;
+}
+
+.enter-uname-container {
+    grid-row-start: 10;
+}
+
+.enter-uname-container button {
+    padding: 3px;
+}
+
+.enter-uname-container button:hover {
+    background-color: #ececec;
+}
+
+#skip {
+    text-decoration: underline;
+    font-size: 12px;
+    color: gray;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.gameover-btns-container {
+    grid-row-end: 10;
+    grid-column-end: 10;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.gameover-btns-container button {
+    width: 120px;
+    height: 30px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 750px) {
+    .final-score-sub {
+        flex-direction: column;
+        grid-row: 4 / span 4;
+    }
+
+    .final-score-container {
+        margin: 5px;
+        flex-direction: row;
+        justify-content: left;
+        height: 50px;
+        width: 300px;
+    }
+    .p{
+        text-align: right;
+        width: 100%;
+    }
+    .final-score-main {
+        grid-row: 1;
+    }
+
+    .SaveScore input {
+        width: 250px;
+    }
+
+    #skip {
+        margin-top: 0;
+    }
+
+    .enter-uname-container {
+        margin-top: 10px;
+        grid-row: 10;
+    }
+    .gameover-btns-container {
+        width: 100vw;
+        grid-column: unset;
+        align-items: center;
+    }
+}

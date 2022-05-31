@@ -1,0 +1,21 @@
+#pause-circle:hover {
+    cursor: pointer;
+}
+
+.material-icons.md-64 {
+    font-size: 64px;
+}
+
+.btn:hover {
+    background-color: #e4ff76;
+}
+
+#exit:hover {
+    background-color: #fa3b29;
+}
+
+#continue:hover {
+    background-color: #ececec;
+}
+
+

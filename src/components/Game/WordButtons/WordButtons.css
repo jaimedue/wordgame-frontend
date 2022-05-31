@@ -1,0 +1,49 @@
+.WordButtons {
+    display: grid;
+    width: 100%;
+    grid-template-rows: repeat(10, 10%);
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.def-container {
+    grid-row: 1 / span 2;
+}
+
+.wordBtns {
+    width: 100vw;
+    height: 100%;
+    grid-row: 3 / 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#button1, #button2 {
+    height: 40%;
+    width: 50%;
+    font-size: 36px;
+    margin: auto;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+@media screen and (max-width: 600px) {
+    #button1, #button2 {
+        font-size: 28px;
+        width: 90%;
+    }
+
+    .def-container {
+        font-size: 12px;
+    }
+    
+}

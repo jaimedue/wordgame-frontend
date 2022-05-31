@@ -1,0 +1,62 @@
+.Timer {
+    display: grid;
+    grid-template-columns: auto 600px auto;
+    grid-template-rows: 60% 15px 20px 15px auto;
+}
+
+.score-container {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+}
+
+.score {
+    width: 100%;
+    align-self: flex-end; 
+}
+
+.timer-bar {
+    margin-left: 50px;
+    border: 2px solid black;
+    height: 20px;
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.time-remaining {
+    background-color: black;
+    height: 100%;
+}
+
+.level-container {
+    border: 3px solid black;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.level {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 750px) {
+    .Timer {
+        grid-template-columns: auto 500px auto;
+    }
+    @media screen and (max-width: 600px) {
+        .Timer {
+            grid-template-columns: auto 400px auto;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .Timer {
+            grid-template-columns: auto 300px auto;
+        }
+    }
+}
