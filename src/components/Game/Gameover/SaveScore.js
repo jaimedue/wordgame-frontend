@@ -16,7 +16,7 @@ const SaveScore = ({setGameState, gameData, setScoreId, accuracy}) => {
 
     // Add user's score to score table
     const saveScore = () => {
-        const URI = "https://mswg-backend.herokuapp.com"
+        const URI = "https://misspelled-word-game.herokuapp.com"
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
