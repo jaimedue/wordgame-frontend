@@ -15,7 +15,7 @@ const Leaderboard = ({scoreId, setCurrentComp}) => {
         getLeaderboardData()
     }, [])
 
-    getLeaderboardData = () => {
+    const getLeaderboardData = () => {
         getScores()
             .then(data => setData(data))
     }
