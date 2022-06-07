@@ -2,16 +2,23 @@ import { useEffect, useState, useMemo } from 'react'
 import { Exit, PlayAgain } from '../../../Buttons/Buttons'
 import './Leaderboard.css'
 import Table from './Table/Table'
+import { getScores } from '../../../../services/ScoresService'
 
 const Leaderboard = ({scoreId, setCurrentComp}) => {
     const[data, setData] = useState([])
 
     // Get all scores from score table
     useEffect(() => {
-        fetch('/api/scores')
-            .then(response => response.json())
-            .then(data => setData(data))
+        // fetch('/api/scores')
+        //     .then(response => response.json())
+        //     .then(data => setData(data))
+        getLeaderboardData()
     }, [])
+
+    getLeaderboardData = () => {
+        getScores()
+            .then(data => setData(data))
+    }
 
     // Leaderboard table displays name, score, level, and accuracy
     // columns from score table

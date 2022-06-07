@@ -1,14 +1,20 @@
 import { useState } from "react"
 import './WordButtons.css'
+import { getQuizWord } from "../../../services/WordService"
 
 const WordButtons = ({gameData, setGameData, timer, setTimer, wordData, setWordData}) => {
     const [buttonEffects, setButtonEffects] = useState({ rButton: "unclicked", lButton: "unclicked" })
     const [order, setOrder] = useState(0);
 
     // Get new set of words
-    const getQuizWord = () => {
-        fetch('/api/words/quiz/word')
-            .then(response => response.json())
+    // const getQuizWord = () => {
+    //     fetch('/api/words/quiz/word')
+    //         .then(response => response.json())
+    //         .then(data => setWordData(data))
+    // }
+
+    const getWordData = () => {
+        getQuizWord()
             .then(data => setWordData(data))
     }
 
@@ -63,7 +69,7 @@ const WordButtons = ({gameData, setGameData, timer, setTimer, wordData, setWordD
     }
 
     const nextWordset = () => {
-        getQuizWord()
+        getWordData()
         setButtonEffects({
             rButton: "unclicked",
             lButton: "unclicked"

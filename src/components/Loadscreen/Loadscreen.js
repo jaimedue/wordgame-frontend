@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import './Loadscreen.css'
+import { getQuizWord } from '../../services/WordService'
 
 const Loadscreen = ({setCurrentComp, setWordData}) => {
     const [hr, setHr] = useState(0)
 
     useEffect(() => {
-        getQuizWord()
+        getWordData()
     }, [])
 
     useEffect(() => {
@@ -26,9 +27,15 @@ const Loadscreen = ({setCurrentComp, setWordData}) => {
     }
 
     // Get new set of words
-    const getQuizWord = () => {
-        fetch('/api/words/quiz/word')
-            .then(response => response.json())
+    // const getQuizWord = () => {
+    //     fetch('/api/words/quiz/word')
+    //         .then(response => response.json())
+    //         .then(data => setWordData(data))
+    //         .then(() => delay())
+    // }
+
+    const getWordData = () => {
+        getQuizWord()
             .then(data => setWordData(data))
             .then(() => delay())
     }

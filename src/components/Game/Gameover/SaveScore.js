@@ -16,6 +16,7 @@ const SaveScore = ({setGameState, gameData, setScoreId, accuracy}) => {
 
     // Add user's score to score table
     const saveScore = () => {
+        const URI = "https://misspelled-word-game.herokuapp.com"
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -29,7 +30,7 @@ const SaveScore = ({setGameState, gameData, setScoreId, accuracy}) => {
                 accuracy: accuracy
             })
         }
-        fetch("/api/scores", requestOptions)
+        fetch(`${URI}/api/scores`, requestOptions)
             .then(response => response.json())
             .then(data => setScoreId(data.id))
     }
